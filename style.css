@@ -1,0 +1,107 @@
+/* CSS Reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;800&display=swap');
+
+/* Palette */
+:root {
+    --light:#bfef39;
+    --dark: #4163189f;
+    --strong:#61d44a;
+    --easy:#EFFD5E;
+    --deep:#CAE354;
+    --white: #ffff;
+  }
+
+  /* ----------------------------------------CSS Style---------------------------------------- */
+
+body{
+    font-family: 'Inconsolata', monospace;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app{
+   position: relative; 
+   width: 800px;
+   height: 500px;
+   background-color: var(--white);
+   box-shadow: 0 5px 20px rgba(0,0,0,.55);
+   justify-content: center;
+   margin-top: 200px;
+}
+
+.game{
+    /* display: none; */
+}
+
+.content{
+    margin: 50px;
+}
+
+.question{
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.answer{
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+input[type='radio'] { 
+    transform: scale(1.6); 
+    cursor: pointer;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1e2d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--light);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid black;
+}
+
+.submit{
+    font-size: 24px;
+    background-color: var(--strong);
+    color: var(--white);
+    padding: 20px;
+    width: 100%;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    border: 1px;
+}
+
+.result{
+    display: none;
+}

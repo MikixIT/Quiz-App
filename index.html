@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz App</title>
+  <!-- links -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app">
+    <div class="game">
+      <div class="content"> 
+        <div class="question"> <h2>what was Super Mario's first real name?</h2></div>
+        <div class="answers">
+          <div class="answer"> 
+            <input name="answer" type="radio" id="answer1" value="true"> 
+            <label for="answer1">Jumpman</label>
+          </div>
+          <div class="answer"> 
+            <input name="answer" type="radio" id="answer2" value="false"> 
+            <label for="answer2">Mega Mario</label>
+          </div>
+          <div class="answer"> 
+            <input name="answer" type="radio" id="answer3" value="false"> 
+            <label for="answer3">Super Dario</label>
+          </div>
+          <div class="answer"> 
+            <input name="answer" type="radio" id="answer4" value="false"> 
+            <label for="answer4">Jumpboy</label>
+          </div>
+        </div>
+      </div> 
+      <button class="submit">Submit</button>
+    </div>
+
+    <div class="result">
+      <h1>Congratulations!</h1>
+      <h3 class="correct">Correct Answers: 3</h3>
+      <h3 class="wrong">Wrong Answers: 2</h3>
+      <h2 class="score">Score: 21!</h2>
+      <button class="play">Play again!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
