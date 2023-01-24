@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    question: "what was Super Mario's first real name?",
+    question: "1. what was Super Mario's first real name?",
     answears: [
       { answear: "Jumpman", isCorrect: true },
       { answear: "Mega Mario", isCorrect: false },
@@ -11,7 +11,7 @@ const data = [
   },
   {
     id: 2,
-    question: "what was Super Mario's first real name?",
+    question: "2. what was Super Mario's first real name?",
     answears: [
       { answear: "A", isCorrect: true },
       { answear: "B", isCorrect: false },
@@ -21,7 +21,7 @@ const data = [
   },
   {
     id: 3,
-    question: "what was Super Mario's first real name?",
+    question: "3. what was Super Mario's first real name?",
     answears: [
       { answear: "A", isCorrect: true },
       { answear: "B", isCorrect: false },
@@ -30,3 +30,10 @@ const data = [
     ],
   },
 ];
+
+const gameScreen = document.querySelector(".game");
+const resulScreen = document.querySelector(".result");
+const question = document.querySelector(".question");
+const answersContainer = document.querySelector(".answers");
+const submit = document.querySelector(".submit");
+const playButton = document.querySelector(".play");
