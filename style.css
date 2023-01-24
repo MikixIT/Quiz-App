@@ -6,102 +6,140 @@
 } */
 
 /* Import */
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;800&display=swap");
 
 /* Palette */
 :root {
-    --light:#bfef39;
-    --dark: #4163189f;
-    --strong:#61d44a;
-    --easy:#EFFD5E;
-    --deep:#CAE354;
-    --white: #ffff;
-  }
-
-  /* ----------------------------------------CSS Style---------------------------------------- */
-
-body{
-    font-family: 'Inconsolata', monospace;
-    background-color: var(--dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  --light: #bfef39;
+  --dark: #4163189f;
+  --strong: #61d44a;
+  --easy: #effd5e;
+  --deep: #cae354;
+  --white: #ffff;
 }
 
-.app{
-   position: relative; 
-   width: 800px;
-   height: 500px;
-   background-color: var(--white);
-   box-shadow: 0 5px 20px rgba(0,0,0,.55);
-   justify-content: center;
-   margin-top: 200px;
+/* ----------------------------------------CSS Style---------------------------------------- */
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.game{
-    /* display: none; */
+.app {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-color: var(--white);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  margin-top: 200px;
 }
 
-.content{
-    margin: 50px;
+.game {
+  /* display: none; */
 }
 
-.question{
-    font-weight: 900;
-    font-size: 28px;
+.content {
+  margin: 50px;
 }
 
-.answer{
-    font-size: 24px;
-    margin-bottom: 24px;
+.question {
+  font-weight: 900;
+  font-size: 28px;
 }
 
-input[type='radio'] { 
-    transform: scale(1.6); 
-    cursor: pointer;
+.answer {
+  font-size: 24px;
+  margin-bottom: 24px;
 }
 
-input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #d1e2d1;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
+/* Make Radio Input much COOL! */
+
+input[type="radio"] {
+  transform: scale(1.6);
+  cursor: pointer;
 }
 
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: var(--light);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 1px solid black;
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1e2d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
 
-.submit{
-    font-size: 24px;
-    background-color: var(--strong);
-    color: var(--white);
-    padding: 20px;
-    width: 100%;
-    font-weight: 900;
-    position: absolute;
-    bottom: 0;
-    cursor: pointer;
-    border: 1px;
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--light);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid black;
 }
 
-.result{
-    display: none;
+.submit {
+  font-size: 24px;
+  background-color: var(--strong);
+  color: var(--white);
+  padding: 20px;
+  width: 100%;
+  font-weight: 900;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  border: 1px;
+}
+
+/* Interface ending quiz */
+
+.result {
+  text-align: center;
+  padding: 50px;
+  display: none;
+}
+
+.result > h1 {
+  font-size: 40px;
+}
+
+.correct {
+  color: var(--strong);
+  font-size: 30px;
+}
+
+.wrong {
+  color: red;
+  font-size: 25px;
+}
+
+.score {
+  color: black;
+  font-weight: 800;
+  text-decoration: overline;
+  font-size: 40px;
+}
+
+.play {
+  font-weight: 900;
+  padding: 15px;
+  font-size: 20px;
+  color: #ffff;
+  background-color: var(--strong);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
 }
