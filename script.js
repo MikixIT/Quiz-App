@@ -2,31 +2,31 @@ const data = [
   {
     id: 1,
     question: "1. what was Super Mario's first real name?",
-    answears: [
-      { answear: "Jumpman", isCorrect: true },
-      { answear: "Mega Mario", isCorrect: false },
-      { answear: "Super Dario", isCorrect: false },
-      { answear: "Jumpboy", isCorrect: false },
+    answers: [
+      { answer: "Jumpman", isCorrect: true },
+      { answer: "Mega Mario", isCorrect: false },
+      { answer: "Super Dario", isCorrect: false },
+      { answer: "Jumpboy", isCorrect: false },
     ],
   },
   {
     id: 2,
     question: "2. what was Super Mario's first real name?",
-    answears: [
-      { answear: "A", isCorrect: true },
-      { answear: "B", isCorrect: false },
-      { answear: "C", isCorrect: false },
-      { answear: "D", isCorrect: false },
+    answers: [
+      { answer: "A", isCorrect: true },
+      { answer: "B", isCorrect: false },
+      { answer: "C", isCorrect: false },
+      { answer: "D", isCorrect: false },
     ],
   },
   {
     id: 3,
     question: "3. what was Super Mario's first real name?",
-    answears: [
-      { answear: "A", isCorrect: true },
-      { answear: "B", isCorrect: false },
-      { answear: "C", isCorrect: false },
-      { answear: "D", isCorrect: false },
+    answers: [
+      { answer: "A", isCorrect: true },
+      { answer: "B", isCorrect: false },
+      { answer: "C", isCorrect: false },
+      { answer: "D", isCorrect: false },
     ],
   },
 ];
@@ -46,6 +46,17 @@ let selectedAnswer = 0;
 
 const showQuestion = (qNumber) => {
   question.textContent = data[qNumber].question;
+  answersContainer.innerHTML = data[qNumber].answers
+    .map(
+      (item, index) =>
+        `
+  <div class="answer"> 
+      <input name="answer" type="radio" id=${index} value=${item.isCorrect}/> 
+      <label for="1">${item.answer}</label>
+    </div>
+    `
+    )
+    .join("");
 };
 
 showQuestion(questionIndex);
