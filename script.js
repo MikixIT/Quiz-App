@@ -37,3 +37,15 @@ const question = document.querySelector(".question");
 const answersContainer = document.querySelector(".answers");
 const submit = document.querySelector(".submit");
 const playButton = document.querySelector(".play");
+
+let questionIndex = 0;
+let correctCount = 0;
+let wrongCount = 0;
+let total = 0;
+let selectedAnswer = 0;
+
+const showQuestion = (qNumber) => {
+  question.textContent = data[qNumber].question;
+};
+
+showQuestion(questionIndex);

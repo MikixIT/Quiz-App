@@ -49,6 +49,7 @@ body {
 .question {
   font-weight: 900;
   font-size: 28px;
+  margin: 30px;
 }
 
 .answer {
