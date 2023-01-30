@@ -57,6 +57,16 @@ const showQuestion = (qNumber) => {
     `
     )
     .join("");
+
+  selectAnswer();
+};
+
+const selectAnswer = () => {
+  answersContainer.querySelectorAll("input").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      console.log(e.target.value);
+    });
+  });
 };
 
 showQuestion(questionIndex);
