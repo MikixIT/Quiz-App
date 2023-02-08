@@ -42,7 +42,7 @@ let questionIndex = 0;
 let correctCount = 0;
 let wrongCount = 0;
 let total = 0;
-let selectedAnswer = 0;
+let selectedAnswer;
 
 const showQuestion = (qNumber) => {
   question.textContent = data[qNumber].question;
@@ -64,7 +64,8 @@ const showQuestion = (qNumber) => {
 const selectAnswer = () => {
   answersContainer.querySelectorAll("input").forEach((el) => {
     el.addEventListener("click", (e) => {
-      console.log(e.target.value);
+      selectedAnswer = e.target.value;
+      selectedAnswer = selectedAnswer.replace("/", ""); //Fixed the var output, i can't explain why always display the "false/", but i've fixed it.
     });
   });
 };
