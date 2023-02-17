@@ -31,6 +31,7 @@ const data = [
   },
 ];
 
+//pick html elements
 const gameScreen = document.querySelector(".game");
 const resulScreen = document.querySelector(".result");
 const question = document.querySelector(".question");
@@ -38,13 +39,34 @@ const answersContainer = document.querySelector(".answers");
 const submit = document.querySelector(".submit");
 const playButton = document.querySelector(".play");
 
+//Counters
 let questionIndex = 0;
 let correctCount = 0;
 let wrongCount = 0;
 let total = 0;
 let selectedAnswer;
 
+const showResult = () => {
+  resulScreen.style.display = "block";
+  gameScreen.style.display = "none";
+
+  resulScreen.querySelector(
+    ".correct"
+  ).textContent = `Correct Answers: ${correctCount}`;
+
+  resulScreen.querySelector(
+    ".correct"
+  ).textContent = `Wrong Answers: ${wrongCount}`;
+
+  resulScreen.querySelector(".correct").textContent = `Score: ${
+    (correctCount - wrongCount) * 10
+  }`;
+};
+
+//function with html formatting for questions
 const showQuestion = (qNumber) => {
+  if (questionIndex === data.length) return showQuestion();
+  selectedAnswer = null;
   question.textContent = data[qNumber].question;
   answersContainer.innerHTML = data[qNumber].answers
     .map(
@@ -70,4 +92,15 @@ const selectAnswer = () => {
   });
 };
 
+const submitAnswer = () => {
+  submit.addEventListener("click", () => {
+    if (selectedAnswer !== null) {
+      selectedAnswer === "true" ? correctCount++ : wrongCount++;
+      questionIndex++;
+      showQuestion(questionIndex);
+    } else alert("Select an Answer to continue, please!");
+  });
+};
+
+submitAnswer();
 showQuestion(questionIndex);

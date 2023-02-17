@@ -26,6 +26,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .app {
@@ -35,7 +37,6 @@ body {
   background-color: var(--white);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
   justify-content: center;
-  margin-top: 200px;
 }
 
 /* .game {
