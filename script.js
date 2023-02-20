@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    question: "1. what was Super Mario's first real name?",
+    question: "1. What was Super Mario's first real name?",
     answers: [
       { answer: "Jumpman", isCorrect: true },
       { answer: "Mega Mario", isCorrect: false },
@@ -11,22 +11,72 @@ const data = [
   },
   {
     id: 2,
-    question: "2. what was Super Mario's first real name?",
+    question: "2. The best-selling book series of the 21st century?",
     answers: [
-      { answer: "A", isCorrect: true },
-      { answer: "B", isCorrect: false },
-      { answer: "C", isCorrect: false },
-      { answer: "D", isCorrect: false },
+      { answer: "Harry Potter", isCorrect: true },
+      { answer: "Don Quixote", isCorrect: false },
+      { answer: "A Tale of Two Cities", isCorrect: false },
+      { answer: "The Hobbit", isCorrect: false },
     ],
   },
   {
     id: 3,
-    question: "3. what was Super Mario's first real name?",
+    question: "3. What is the smallest country in the world?",
     answers: [
-      { answer: "A", isCorrect: true },
-      { answer: "B", isCorrect: false },
-      { answer: "C", isCorrect: false },
-      { answer: "D", isCorrect: false },
+      { answer: "Northern Ireland", isCorrect: false },
+      { answer: "San Marino", isCorrect: false },
+      { answer: "The Vatican", isCorrect: true },
+      { answer: "Iceland", isCorrect: false },
+    ],
+  },
+  {
+    id: 4,
+    question: "4. How many keys are there in classical piano?",
+    answers: [
+      { answer: "82", isCorrect: false },
+      { answer: "78", isCorrect: false },
+      { answer: "88", isCorrect: true },
+      { answer: "64", isCorrect: false },
+    ],
+  },
+  {
+    id: 5,
+    question: "5. What city did 'the Beatles' come from?",
+    answers: [
+      { answer: "London", isCorrect: false },
+      { answer: "Liverpool", isCorrect: true },
+      { answer: "New York", isCorrect: false },
+      { answer: "Chicago", isCorrect: false },
+    ],
+  },
+  {
+    id: 6,
+    question: "6. When was Netflix founded?",
+    answers: [
+      { answer: "2018", isCorrect: false },
+      { answer: "2014", isCorrect: false },
+      { answer: "2006", isCorrect: false },
+      { answer: "1997", isCorrect: true },
+    ],
+  },
+  {
+    id: 7,
+    question: "7. Who invented the World Wide Web (WWW) and when?",
+    answers: [
+      { answer: "Tim Berners-Lee-Jackson, 1890", isCorrect: false },
+      { answer: "Tim Berners-Lee, 1990", isCorrect: true },
+      { answer: "Marc Berners-Lee, 1991", isCorrect: false },
+      { answer: "Bruce Berners-Lee, 1998", isCorrect: false },
+    ],
+  },
+  {
+    id: 8,
+    question: "8. What happened on July 20, 1969?",
+    answers: [
+      { answer: "President Kennedy dies", isCorrect: false },
+      { answer: "Apollo Moon landing", isCorrect: true },
+      { answer: "The first McDonald's", isCorrect: false },
+      { answer: "Nothing important happens", isCorrect: false },
     ],
   },
 ];
