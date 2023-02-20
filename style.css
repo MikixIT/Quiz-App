@@ -18,6 +18,25 @@
   --white: #ffff;
 }
 
+/* ----------------------------------------Responsive---------------------------------------- */
+
+@media (max-width: 668px) {
+  body {
+    max-width: 400px;
+    overflow: hidden;
+  }
+
+  input[type="radio"] {
+    transform: scale(2);
+    cursor: pointer;
+  }
+
+  .answer {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
 /* ----------------------------------------CSS Style---------------------------------------- */
 
 body {
@@ -49,19 +68,19 @@ body {
 
 .question {
   font-weight: 900;
-  font-size: 28px;
+  font-size: 24px;
   margin: 30px;
 }
 
 .answer {
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-size: 25px;
+  margin-bottom: 30px;
 }
 
 /* Make Radio Input much COOL! */
 
 input[type="radio"] {
-  transform: scale(1.6);
+  transform: scale(1.5);
   cursor: pointer;
 }
 

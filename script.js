@@ -63,10 +63,10 @@ const data = [
     id: 7,
     question: "7. Who invented the World Wide Web (WWW) and when?",
     answers: [
-      { answer: "Tim Berners-Lee-Jackson, 1890", isCorrect: false },
+      { answer: "Tim Berners-Quii, 1890", isCorrect: false },
       { answer: "Tim Berners-Lee, 1990", isCorrect: true },
       { answer: "Marc Berners-Lee, 1991", isCorrect: false },
-      { answer: "Bruce Berners-Lee, 1998", isCorrect: false },
+      { answer: "Bruce Berners, 1998", isCorrect: false },
     ],
   },
   {
