@@ -33,7 +33,7 @@ const data = [
 
 //pick html elements
 const gameScreen = document.querySelector(".game");
-const resulScreen = document.querySelector(".result");
+const resultScreen = document.querySelector(".result");
 const question = document.querySelector(".question");
 const answersContainer = document.querySelector(".answers");
 const submit = document.querySelector(".submit");
@@ -46,20 +46,35 @@ let wrongCount = 0;
 let total = 0;
 let selectedAnswer;
 
+const playAgain = () => {
+  //reset counters for new game
+  let questionIndex = 0;
+  let correctCount = 0;
+  let wrongCount = 0;
+  let total = 0;
+  showQuestion(questionIndex);
+};
+playButton.addEventListener("click", () => {
+  //Make invisible again the result screen
+  resultScreen.style.display = "none";
+  gameScreen.style.display = "block";
+  playAgain();
+});
+
 const showResult = () => {
-  resulScreen.style.display = "block";
+  resultScreen.style.display = "block";
   gameScreen.style.display = "none";
 
-  resulScreen.querySelector(
+  resultScreen.querySelector(
     ".correct"
   ).textContent = `Correct Answers: ${correctCount}`;
 
-  resulScreen.querySelector(
-    ".correct"
+  resultScreen.querySelector(
+    ".wrong"
   ).textContent = `Wrong Answers: ${wrongCount}`;
 
-  resulScreen.querySelector(".correct").textContent = `Score: ${
-    (correctCount++ - wrongCount) * 100
+  resultScreen.querySelector(".score").textContent = `Score: ${
+    (correctCount++ - wrongCount++) * 100
   }`;
 };
 
