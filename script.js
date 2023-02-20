@@ -59,13 +59,13 @@ const showResult = () => {
   ).textContent = `Wrong Answers: ${wrongCount}`;
 
   resulScreen.querySelector(".correct").textContent = `Score: ${
-    (correctCount - wrongCount) * 10
+    (correctCount++ - wrongCount) * 100
   }`;
 };
 
 //function with html formatting for questions
 const showQuestion = (qNumber) => {
-  if (questionIndex === data.length) return showQuestion();
+  if (questionIndex === data.length) return showResult();
   selectedAnswer = null;
   question.textContent = data[qNumber].question;
   answersContainer.innerHTML = data[qNumber].answers
@@ -102,5 +102,6 @@ const submitAnswer = () => {
   });
 };
 
+//Calls Function
 submitAnswer();
 showQuestion(questionIndex);
