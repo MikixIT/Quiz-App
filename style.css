@@ -145,3 +145,9 @@ input[type="radio"]:checked:after {
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
